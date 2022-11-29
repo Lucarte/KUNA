@@ -1,0 +1,45 @@
+header {
+  background-color: #344aa6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#logo {
+  padding: 3%;
+  background-color: aqua;
+  align-self: center;
+}
+
+header {
+
+  p,
+  button {
+    padding: 3%;
+    background-color: aqua;
+    align-self: center;
+  }
+}
+
+nav {
+  padding: 3%;
+  background-color: aqua;
+  align-self: center;
+  background-color: lightgreen;
+  margin-right: 5%;
+}
+
+#logo {
+  margin-left: 5%;
+}
+
+header {
+  p {
+    background-color: lightcoral;
+    visibility: hidden;
+  }
+
+  button {
+    background-color: violet;
+  }
+}

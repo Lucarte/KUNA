@@ -1,0 +1,9 @@
+// sass --watch main.scss:css/style.css OR sass --watch resources/scss/main.scss:public/css/style.css
+
+@import '_resetter';
+@import '_global';
+@import '_header';
+@import '_index';
+@import '_infos';
+@import '_biographien';
+@import '_mediaQueries';

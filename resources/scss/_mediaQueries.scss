@@ -1,0 +1,31 @@
+@media (min-width: 768px) {
+  /* find a way to position the footer fixed at bottom */
+
+  header p {
+    visibility: visible;
+  }
+
+  .preise,
+  .zeiten,
+  .directions,
+  .anmeldeformular,
+  .kontaktformular {
+    height: 25em;
+    width: 65em;
+    margin: 10%;
+  }
+
+  .section2,
+  .section7 {
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10%;
+  }
+
+  .sectionB {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

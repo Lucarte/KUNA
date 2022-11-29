@@ -1,5 +1,142 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 :root {
@@ -16,8 +153,6 @@ body {
   width: 100%;
 }
 
-/* ############### HEADER SECTION ############### */
-
 header {
   background-color: #344aa6;
   display: flex;
@@ -25,16 +160,23 @@ header {
   justify-content: space-between;
 }
 
-#logo,
+#logo {
+  padding: 3%;
+  background-color: aqua;
+  align-self: center;
+}
+
 header p,
-header button,
-nav {
+header button {
   padding: 3%;
   background-color: aqua;
   align-self: center;
 }
 
 nav {
+  padding: 3%;
+  background-color: aqua;
+  align-self: center;
   background-color: lightgreen;
   margin-right: 5%;
 }
@@ -47,12 +189,9 @@ header p {
   background-color: lightcoral;
   visibility: hidden;
 }
-
 header button {
   background-color: violet;
 }
-
-/* ########## BODY SECTION --INDEX-- ########## */
 
 main {
   background-color: #293462;
@@ -62,10 +201,8 @@ main {
   justify-content: center;
   align-items: center;
   color: beige;
-
 }
 
-/* investigate how to make the footer stick but ONLY on the index.html, the others auto */
 footer {
   background-color: #293462;
   display: flex;
@@ -87,14 +224,12 @@ footer {
   margin: 1%;
   background-color: #293462;
   color: beige;
-  font-size: x-small
+  font-size: x-small;
 }
 
 a:hover {
   cursor: pointer;
 }
-
-/* ########## BODY SECTION --INFOS-- ########## */
 
 .main-infos {
   flex-direction: column;
@@ -121,10 +256,13 @@ h2 {
   height: 20em;
   width: 40em;
   margin: 15%;
-
+}
+.preise p {
+  padding: 5%;
+  padding-top: 0;
+  line-height: 1.5;
 }
 
-.preise p,
 .zeiten p {
   padding: 5%;
   padding-top: 0;
@@ -180,71 +318,58 @@ h2 {
   background-color: var(--secondary-color);
 }
 
-
-/* ########## BODY SECTION --BIOGRAPHIEN-- ########## */
-
 .main-biographien {
   flex-direction: column;
   font-size: 17px;
 }
-
-.main-biographien>section:not(:nth-child(2)) {
-  flex-direction: column;
-  background-color: rgb(16, 109, 109);
-}
-
-.main-biographien>section {
+.main-biographien > section {
   background-color: blueviolet;
   padding: 4%;
 }
-
-.main-biographien>.sectionB>div {
+.main-biographien > section:not(:nth-child(2)) {
+  flex-direction: column;
+  background-color: rgb(16, 109, 109);
+}
+.main-biographien > .sectionB > div {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 140px auto;
 }
-
 .main-biographien:first-child {
   background-color: lightcoral;
 }
 
-.sectionA>div {
+.sectionA > div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.main-biographien>section>div>p {
+.main-biographien > section > div > p {
   margin: 2em;
   margin-bottom: 3em;
   text-align: justify;
 }
-
-.main-biographien>h1 {
+.main-biographien > h1 {
   font-size: x-large;
   /* font-stretch: extra-expanded; WARUM GREIT NICHT?*/
   padding: 2em;
 }
-
-.main-biographien>section>div>p {
+.main-biographien > section > div > p {
   line-height: 1.5;
 }
 
-.sectionA>div>h2 {
+.sectionA > div > h2 {
   padding-top: 1%;
   font-size: large;
 }
 
-/* ############### MEDIA QUEERIES ############### */
-
 @media (min-width: 768px) {
-
   /* find a way to position the footer fixed at bottom */
   header p {
     visibility: visible;
   }
-
   .preise,
   .zeiten,
   .directions,
@@ -254,7 +379,6 @@ h2 {
     width: 65em;
     margin: 10%;
   }
-
   .section2,
   .section7 {
     background-color: var(--tertiary-color);
@@ -263,9 +387,10 @@ h2 {
     justify-content: space-evenly;
     margin: 10%;
   }
-
   .sectionB {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

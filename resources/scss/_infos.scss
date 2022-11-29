@@ -1,0 +1,88 @@
+.main-infos {
+  flex-direction: column;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  padding: 5%;
+}
+
+.section1,
+.section4,
+.section6 {
+  background-color: rgb(255, 166, 0);
+}
+
+.preise {
+  background-color: rgba(152, 7, 152, 0.877);
+  height: 20em;
+  width: 40em;
+  margin: 15%;
+
+  p {
+    padding: 5%;
+    padding-top: 0;
+    line-height: 1.5;
+  }
+}
+
+.zeiten p {
+  padding: 5%;
+  padding-top: 0;
+  line-height: 1.5;
+}
+
+/* why does the bottom border not align!! */
+
+.section2,
+.section7 {
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15%;
+}
+
+.zeiten,
+.directions,
+.anmeldeformular,
+.kontaktformular {
+  height: 20em;
+  width: 40em;
+  margin: 15%;
+}
+
+.directions,
+.anmeldeformular,
+.kontaktformular {
+  display: flex;
+  justify-content: center;
+}
+
+.zeiten {
+  background-color: var(--primary-color);
+}
+
+.section3,
+.section5 {
+  background-color: var(--secondary-color);
+}
+
+.directions {
+  background-color: var(--secondary-color);
+  flex-direction: column;
+  align-items: center;
+}
+
+.anmeldeformular {
+  background-color: var(--primary-color);
+}
+
+.kontaktformular {
+  background-color: var(--secondary-color);
+}

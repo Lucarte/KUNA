@@ -1,0 +1,57 @@
+.main-biographien {
+  flex-direction: column;
+  font-size: 17px;
+
+  > {
+    section {
+      &:not(:nth-child(2)) {
+        flex-direction: column;
+        background-color: rgb(16, 109, 109);
+      }
+
+      background-color: blueviolet;
+      padding: 4%;
+    }
+
+    .sectionB>div {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 140px auto;
+    }
+  }
+
+  &:first-child {
+    background-color: lightcoral;
+  }
+}
+
+.sectionA>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-biographien> {
+  section>div>p {
+    margin: 2em;
+    margin-bottom: 3em;
+    text-align: justify;
+  }
+
+  h1 {
+    font-size: x-large;
+
+    /* font-stretch: extra-expanded; WARUM GREIT NICHT?*/
+    padding: 2em;
+  }
+
+  section>div>p {
+    line-height: 1.5;
+  }
+}
+
+.sectionA>div>h2 {
+  padding-top: 1%;
+  font-size: large;
+}
