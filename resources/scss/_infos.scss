@@ -86,3 +86,30 @@ h2 {
 .kontaktformular {
   background-color: var(--secondary-color);
 }
+
+@media (min-width: 768px) {
+
+  .preise,
+  .zeiten,
+  .directions,
+  .anmeldeformular,
+  .kontaktformular {
+    height: 25em;
+    width: 65em;
+    margin: 10%;
+  }
+
+  .section2,
+  .section7 {
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10%;
+  }
+
+  .sectionB {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

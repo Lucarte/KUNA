@@ -1,45 +1,69 @@
 header {
-  background-color: #344aa6;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+  background-color: white;
+  display: grid;
+  grid-template-columns: 3% 2% 45% 10% 10% 25% 5%;
 
-#logo {
-  padding: 3%;
-  background-color: aqua;
-  align-self: center;
-}
 
-header {
-
-  p,
-  button {
-    padding: 3%;
-    background-color: aqua;
+  #logo {
+    grid-column-start: 3;
     align-self: center;
-  }
-}
 
-nav {
-  padding: 3%;
-  background-color: aqua;
-  align-self: center;
-  background-color: lightgreen;
-  margin-right: 5%;
-}
+    img {
+      height: 5rem;
+      width: 7rem;
+    }
 
-#logo {
-  margin-left: 5%;
-}
-
-header {
-  p {
-    background-color: lightcoral;
-    visibility: hidden;
+    @media (min-width: 992px) {
+      grid-column-start: 2;
+    }
   }
 
-  button {
-    background-color: violet;
+  .button-nav-div {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    @media (min-width: 576px) {
+      grid-column-start: 5;
+      margin-left: 10%;
+    }
+
+    @media (min-width: 768px) {
+      grid-column-start: 6;
+      margin-left: 15%;
+    }
+
+
+
+    button {
+      background-color: white;
+      border: 3px solid $secondary-color;
+      border-radius: 5px;
+      width: fit-content;
+      padding: .4rem .6rem;
+      align-self: center;
+      color: $secondary-color;
+      font-family: $font-default;
+      font-size: .75rem;
+
+      @media (min-width: 768px) {
+        font-size: .88rem;
+        padding: .5rem .7rem;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 1rem;
+        // font-size: 14;
+        // change padding? or size of the box itself?
+      }
+    }
+
+
   }
+
+
+
 }

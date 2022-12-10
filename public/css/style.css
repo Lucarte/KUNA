@@ -139,72 +139,25 @@ table {
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: rgb(255, 166, 0);
-  --secondary-color: rgba(152, 7, 152, 0.877);
-  --tertiary-color: #293462;
-}
-
 body {
-  background-color: rgb(96, 96, 15);
+  background-color: #f25430;
   /* min-height: 100vh; */
   display: grid;
   grid-template-rows: 10vh 84vh 2vh 4vh;
-  width: 100%;
-}
-
-header {
-  background-color: #344aa6;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#logo {
-  padding: 3%;
-  background-color: aqua;
-  align-self: center;
-}
-
-header p,
-header button {
-  padding: 3%;
-  background-color: aqua;
-  align-self: center;
-}
-
-nav {
-  padding: 3%;
-  background-color: aqua;
-  align-self: center;
-  background-color: lightgreen;
-  margin-right: 5%;
-}
-
-#logo {
-  margin-left: 5%;
-}
-
-header p {
-  background-color: lightcoral;
-  visibility: hidden;
-}
-header button {
-  background-color: violet;
 }
 
 main {
-  background-color: #293462;
+  background-color: white;
   grid-row-start: 2;
   grid-row-end: 14;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: beige;
+  color: #f25430;
 }
 
 footer {
-  background-color: #293462;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,6 +271,29 @@ h2 {
   background-color: var(--secondary-color);
 }
 
+@media (min-width: 768px) {
+  .preise,
+  .zeiten,
+  .directions,
+  .anmeldeformular,
+  .kontaktformular {
+    height: 25em;
+    width: 65em;
+    margin: 10%;
+  }
+  .section2,
+  .section7 {
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10%;
+  }
+  .sectionB {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .main-biographien {
   flex-direction: column;
   font-size: 17px;
@@ -365,32 +341,104 @@ h2 {
   font-size: large;
 }
 
+header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 3% 2% 45% 10% 10% 25% 5%;
+}
+header #logo {
+  grid-column-start: 3;
+  align-self: center;
+}
+header #logo img {
+  height: 5rem;
+  width: 7rem;
+}
+@media (min-width: 992px) {
+  header #logo {
+    grid-column-start: 2;
+  }
+}
+header .button-nav-div {
+  grid-column-start: 4;
+  grid-column-end: 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (min-width: 576px) {
+  header .button-nav-div {
+    grid-column-start: 5;
+    margin-left: 10%;
+  }
+}
 @media (min-width: 768px) {
-  /* find a way to position the footer fixed at bottom */
-  header p {
-    visibility: visible;
+  header .button-nav-div {
+    grid-column-start: 6;
+    margin-left: 15%;
   }
-  .preise,
-  .zeiten,
-  .directions,
-  .anmeldeformular,
-  .kontaktformular {
-    height: 25em;
-    width: 65em;
-    margin: 10%;
+}
+header .button-nav-div button {
+  background-color: white;
+  border: 3px solid #011140;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 0.4rem 0.6rem;
+  align-self: center;
+  color: #011140;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.75rem;
+}
+@media (min-width: 768px) {
+  header .button-nav-div button {
+    font-size: 0.88rem;
+    padding: 0.5rem 0.7rem;
   }
-  .section2,
-  .section7 {
-    background-color: var(--tertiary-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10%;
+}
+@media (min-width: 992px) {
+  header .button-nav-div button {
+    font-size: 1rem;
   }
-  .sectionB {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+nav input {
+  opacity: 1;
+  z-index: 2;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.5rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  nav input {
+    display: none;
   }
+}
+nav #hamburger-nav {
+  background-color: #f25430;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1;
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0.5rem;
+}
+nav #hamburger-nav span {
+  display: inline-block;
+  width: 1.75rem;
+  height: 0.33rem;
+  border-radius: 2px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
