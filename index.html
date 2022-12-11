@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KUNA</title>
   <link rel="shortcut icon" href="resources/img/logo_icon.svg" type="image/x-icon" />
-
   <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 
@@ -17,30 +16,33 @@
       <img src="/resources/img/logo_orange.svg"
         alt="three triangle silouhetten without bottom line over each other with the text KUNA to the left of it - all in orange">
     </a>
-    <div class="button-nav-div">
-      <button>
-        ANMELDEN
-      </button>
-      <nav>
-        <input type="checkbox" />
-        <div id="hamburger-nav">
-          <span></span>
-          <span></span>
+    <button class="btn">
+      ANMELDEN
+    </button>
+    <nav tabindex="0" class="menu-wrap">
+      <input type="checkbox" class="toggler" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li>
+                <a href="biographien.html" role="menuitem">Wir</a>
+              </li>
+              <li>
+                <a href="infos.html" role="menuitem">Infos</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <ul>
-          <li>
-            <a href="biographien.html" role="menuitem"></a>
-          </li>
-          <li>
-            <a href="infos.html" role="menuitem"></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <main class="slide-show">
-    Slide Show
+
   </main>
 
   <footer>

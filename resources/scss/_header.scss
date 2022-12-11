@@ -1,69 +1,35 @@
 header {
   background-color: white;
   display: grid;
-  grid-template-columns: 3% 2% 45% 10% 10% 25% 5%;
-
+  grid-template-columns: 5fr 2fr 3fr;
 
   #logo {
-    grid-column-start: 3;
-    align-self: center;
+    position: fixed;
+    top: 2rem;
+    left: 2.5rem;
 
     img {
-      height: 5rem;
+      height: auto;
       width: 7rem;
     }
-
-    @media (min-width: 992px) {
-      grid-column-start: 2;
-    }
   }
 
-  .button-nav-div {
-    grid-column-start: 4;
-    grid-column-end: 7;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  button {
+    grid-column-start: 2;
+    position: sticky;
+    top: 2.3rem;
+    background-color: white;
+    border: 3px solid $secondary-color;
+    border-radius: 5px;
+    width: fit-content;
+    padding: .4rem .6rem;
+    align-self: center;
+    color: $secondary-color;
+    font-family: $font-default;
+    font-size: .75rem;
 
-
-    @media (min-width: 576px) {
-      grid-column-start: 5;
-      margin-left: 10%;
+    @media (min-width: 650px) {
+      grid-column-start: 3;
     }
-
-    @media (min-width: 768px) {
-      grid-column-start: 6;
-      margin-left: 15%;
-    }
-
-
-
-    button {
-      background-color: white;
-      border: 3px solid $secondary-color;
-      border-radius: 5px;
-      width: fit-content;
-      padding: .4rem .6rem;
-      align-self: center;
-      color: $secondary-color;
-      font-family: $font-default;
-      font-size: .75rem;
-
-      @media (min-width: 768px) {
-        font-size: .88rem;
-        padding: .5rem .7rem;
-      }
-
-      @media (min-width: 992px) {
-        font-size: 1rem;
-        // font-size: 14;
-        // change padding? or size of the box itself?
-      }
-    }
-
-
   }
-
-
-
 }

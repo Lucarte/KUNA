@@ -1,58 +1,199 @@
 nav {
-  display: flex;
-  align-items: center;
-  //grid-column-start: 6;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
 
-  // position: relative;
-  // padding: 3%;
-  // align-self: center;
-  // margin-right: 5%;
-
-  ul {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-
-    li {}
-  }
-
-  input {
-    opacity: 1;
+  .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 2;
-    height: 3rem;
-    width: 3rem;
-    padding: .5rem;
-    display: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
 
-    @media (min-width: 768px) {
-      display: none;
+    // Toggler animation
+    &:checked+.hamburger>div {
+      transform: rotate(135deg);
+
+      // Turns lines into X
+      &:before,
+      &:after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+    }
+
+    // Rotate on hover when checked -- does not work!!!
+    &:checked:hover+.hamburger>div {
+      transform: rotate(225deg);
+    }
+
+    // Show menu
+    &:checked~.menu {
+      visibility: visible;
+
+      &>div {
+        transform: scale(1);
+        transition-duration: .4s ease;
+
+        &>div {
+          opacity: 1;
+          transition: opacity .4s ease;
+        }
+      }
     }
   }
 
-  #hamburger-nav {
-    // position: absolute;
-    // align-self: center;
-    background-color: $primary-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 1;
-    height: 2.75rem;
-    width: 2.75rem;
-    padding: .5rem;
+    width: 45px;
+    height: 45px;
+    padding: .6rem;
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .9s ease;
 
-
-    span {
-      display: inline-block;
-      width: 1.75rem;
-      height: .33rem;
-      border-radius: 2px;
+    // Hamburger center line
+    &>div {
+      position: relative;
+      width: 100%;
+      height: 2px;
       background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
+      // Hamburger outer lines
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+      }
+
+      // Moves line down
+      &:after {
+        top: 10px;
+      }
     }
-
-    @media (min-width: 768px) {}
   }
 
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    &>div {
+      background: white;
+      // opacity: 50%;
+      // border: solid $secondary-color;
+      // border-width: 7px;
+      // border-radius: 60%;
+      width: 300vw;
+      height: 300vw;
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: center;
+      transform: scale(1);
+      transition: all .5s ease;
+
+      &>div {
+        // text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        // opacity: 0;
+        // transition: opacity .4s ease;
+
+        &>ul>li {
+          border: $secondary-color solid;
+          border-radius: 4px;
+          transform: translate(0, -7rem) rotate(315deg);
+          padding: .5rem;
+
+          @media (min-width: 650px) {
+            transform: translate(-9rem, 0rem) rotate(315deg);
+          }
+
+          &~li {
+            transform: translate(0, 7rem) rotate(45deg);
+
+            @media (min-width: 650px) {
+              transform: translate(9rem, -2rem) rotate(45deg);
+            }
+          }
+
+          &>a {
+            color: $primary-color;
+            text-decoration: none;
+            transition: color .04s ease;
+          }
+        }
+      }
+    }
+  }
 }
+
+
+
+
+
+
+// ul {
+//   display: none;
+// }
+
+// input {
+//   opacity: 1;
+//   z-index: 2;
+//   height: 3rem;
+//   width: 3rem;
+//   padding: .5rem;
+//   // display: none;
+//   top: 30px;
+//   right: 16px;
+// }
+
+// #hamburger-nav {
+//   z-index: 1;
+//   position: absolute;
+//   align-self: center;
+//   background-color: $primary-color;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   height: 2.75rem;
+//   width: 2.75rem;
+//   padding: .5rem;
+//   top: 30px;
+//   right: 20px;
+
+
+//   span {
+//     display: inline-block;
+//     width: 1.75rem;
+//     height: .33rem;
+//     border-radius: 2px;
+//     background-color: white;
+//   }
+
+//   @media (min-width: 768px) {}
+// }
