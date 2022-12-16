@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-width: 5px;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g id="facebook_black" data-name="facebook black">
+      <rect class="cls-2" x="2.5" y="2.5" width="70" height="70" rx="12" ry="12"/>
+      <path class="cls-1" d="M31.07,57.06v-23.05h-5.36v-3.7h5.36v-1.27c0-3.76,1.18-7.18,4.41-9.34,2.6-1.77,6.07-2.49,9.3-2.49,2.44,0,4.57,.39,5.91,.77l-.95,3.76c-1.02-.33-2.44-.61-4.41-.61-5.91,0-7.41,3.65-7.41,7.74v1.44h9.22v3.7h-9.22v23.05h-6.86Z"/>
+    </g>
+  </g>
+</svg>

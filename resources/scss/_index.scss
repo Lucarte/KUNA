@@ -1,37 +1,40 @@
 main {
+  // position: absolute;
+  // z-index: 3;
   background-color: white;
   grid-row-start: 2;
-  grid-row-end: 14;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $primary-color;
-}
-
-footer {
-  background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  grid-row-end: auto;
-  padding-top: 2%;
-}
+  justify-content: space-between;
+  padding-left: 2.3rem;
+  padding-top: 2rem;
+  color: $primary-color;
 
-.icons {
-  background-color: lightcoral;
-  margin: 1%;
-  padding: 2%;
-  display: flex;
-  align-items: center;
-}
+  div {
+    line-height: 1.2;
+    font-family: $font-kunst;
+    color: $secondary-color;
+    font-size: 2rem;
 
-.impressum {
-  margin: 1%;
-  background-color: #293462;
-  color: beige;
-  font-size: x-small;
-}
+    &~div {
+      width: 100%;
+      height: 45%;
+      display: flex;
+      justify-content: flex-end;
+      font-family: $font-default;
+      font-size: 1rem;
+      padding-right: 9rem;
+    }
+  }
 
-a:hover {
-  cursor: pointer;
+
+
+  // @media (min-width: 650px) {
+  //   justify-content: flex-start;
+  //   align-items: flex-start;
+  // }
+
+  a:hover {
+    cursor: pointer;
+  }
 }

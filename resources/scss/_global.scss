@@ -3,9 +3,9 @@
 }
 
 body {
-  background-color: $primary-color;
-  /* min-height: 100vh; */
   display: grid;
-  grid-template-rows: 10vh 84vh 2vh 4vh;
-  // width: 100%;
+  grid-template-rows: 10vh 85vh;
+  background-color: $primary-color;
+  // position: relative;
+  width: 100%;
 }

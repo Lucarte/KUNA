@@ -1,12 +1,15 @@
 header {
+  // position: fixed;
+  // z-index: 2;
   background-color: white;
   display: grid;
+  align-items: center;
+  padding-top: 1.4rem;
   grid-template-columns: 5fr 2fr 3fr;
 
+  // Hacerlo responsive, de pronto mas grande segun la pantalla
   #logo {
-    position: fixed;
-    top: 2rem;
-    left: 2.5rem;
+    margin-left: 2.5rem;
 
     img {
       height: auto;
@@ -16,17 +19,15 @@ header {
 
   button {
     grid-column-start: 2;
-    position: sticky;
-    top: 2.3rem;
     background-color: white;
     border: 3px solid $secondary-color;
     border-radius: 5px;
     width: fit-content;
-    padding: .4rem .6rem;
-    align-self: center;
+    padding: .3rem .6rem .1rem .6rem;
     color: $secondary-color;
     font-family: $font-default;
-    font-size: .75rem;
+    font-size: .85rem;
+    // font-stretch: ultra-expanded; does not work!
 
     @media (min-width: 650px) {
       grid-column-start: 3;

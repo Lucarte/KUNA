@@ -1,0 +1,36 @@
+// Ajustar los colores, de pronto blanco por dentro para los iconos, y los tamanos de acuerdo a si mobil o web etc.
+footer {
+  display: flex;
+  flex-direction: column;
+  grid-row-start: 3;
+  align-items: center;
+  margin-bottom: 0;
+
+  .icons {
+    width: fit-content;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 2.3rem;
+      height: 1.3rem;
+    }
+  }
+
+  // warum kann ich dieses Element nicht einfach mit dem Footer Angaben zentrieren?
+  .impressum {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100vw;
+    padding: .2rem;
+    color: $secondary-color;
+    font-size: x-small;
+    font-family: $font-default;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+}

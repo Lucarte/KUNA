@@ -1,7 +1,7 @@
 nav {
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 2.1rem;
+  right: 2.1rem;
 
   .toggler {
     position: absolute;
@@ -23,11 +23,6 @@ nav {
         top: 0;
         transform: rotate(90deg);
       }
-    }
-
-    // Rotate on hover when checked -- does not work!!!
-    &:checked:hover+.hamburger>div {
-      transform: rotate(225deg);
     }
 
     // Show menu
@@ -103,10 +98,6 @@ nav {
 
     &>div {
       background: white;
-      // opacity: 50%;
-      // border: solid $secondary-color;
-      // border-width: 7px;
-      // border-radius: 60%;
       width: 300vw;
       height: 300vw;
       display: flex;
@@ -118,33 +109,138 @@ nav {
 
       &>div {
         // text-align: center;
-        max-width: 90vw;
-        max-height: 100vh;
+        // max-width: 90vw;
+        // max-height: 100vh;
         // opacity: 0;
         // transition: opacity .4s ease;
 
+
+
         &>ul>li {
-          border: $secondary-color solid;
-          border-radius: 4px;
-          transform: translate(0, -7rem) rotate(315deg);
+          border: $secondary-color solid 3px;
+          height: 7rem;
+          width: 2rem;
+          border-radius: 5px;
+          transform: translate(-3rem, -7rem) rotate(405deg);
           padding: .5rem;
 
           @media (min-width: 650px) {
-            transform: translate(-9rem, 0rem) rotate(315deg);
+            transform: translate(-13rem, -1rem) rotate(405deg);
+            height: 8rem;
+            width: 2.5rem;
           }
 
           &~li {
-            transform: translate(0, 7rem) rotate(45deg);
+            transform: translate(3rem, 3rem) rotate(-45deg);
 
             @media (min-width: 650px) {
-              transform: translate(9rem, -2rem) rotate(45deg);
+              transform: translate(13rem, -9rem) rotate(-45deg);
             }
           }
 
           &>a {
             color: $primary-color;
             text-decoration: none;
+            font-family: $font-default;
+            font-size: 1rem;
             transition: color .04s ease;
+
+            @media (min-width: 650px) {
+              font-size: 1.2rem;
+            }
+
+            &>.team {
+              transform: translate(3rem, 3rem) rotate(-45deg);
+              display: flex;
+              flex-direction: column;
+              line-height: 20px;
+
+              .t {
+                transform: translate(2rem)
+              }
+
+              .e {
+                transform: translate(3rem)
+              }
+
+              .a {
+                transform: translate(4rem)
+              }
+
+              .m {
+                transform: translate(5rem)
+              }
+            }
+
+            @media (min-width: 650px) {
+              transform: translate(1rem, .5rem) rotate(-45deg);
+
+
+              .t {
+                transform: translate(2rem)
+              }
+
+              .e {
+                transform: translate(3rem)
+              }
+
+              .a {
+                transform: translate(4rem)
+              }
+
+              .m {
+                transform: translate(5rem)
+              }
+            }
+
+            &>.infos {
+              transform: translate(-4rem, 1.6rem) rotate(45deg);
+              line-height: 20px;
+
+              .i {
+                transform: translate(0rem)
+              }
+
+              .n {
+                transform: translate(-1rem)
+              }
+
+              .f {
+                transform: translate(-2rem)
+              }
+
+              .o {
+                transform: translate(-3rem)
+              }
+
+              .s {
+                transform: translate(-4rem)
+              }
+
+              @media (min-width: 650px) {
+                transform: translate(-4rem, 2rem) rotate(45deg);
+
+                .i {
+                  transform: translate(0rem)
+                }
+
+                .n {
+                  transform: translate(-1.5rem)
+                }
+
+                .f {
+                  transform: translate(-3rem)
+                }
+
+                .o {
+                  transform: translate(-4.5rem)
+                }
+
+                .s {
+                  transform: translate(-6rem)
+                }
+              }
+            }
           }
         }
       }

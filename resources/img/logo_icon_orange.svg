@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.66 106">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f25430;
+      }
+    </style>
+  </defs>
+  <g id="Logos_icon" data-name="Logos icon">
+    <g id="Logo_orange" data-name="Logo orange">
+      <polygon class="cls-1" points="33.55 106 41.69 106 47.69 92.84 53.69 106 61.83 106 47.69 75 33.55 106"/>
+      <polygon class="cls-1" points="20.97 103.08 29.11 103.08 50.44 56.28 71.78 103.08 79.92 103.08 50.44 38.43 20.97 103.08"/>
+      <polygon class="cls-1" points="48.33 17.85 88.52 106 96.66 106 48.33 0 0 106 8.14 106 48.33 17.85"/>
+    </g>
+  </g>
+</svg>
