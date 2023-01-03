@@ -141,14 +141,18 @@ table {
 
 body {
   display: grid;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: 100px 85vh;
   background-color: #f25430;
   width: 100%;
+  font-size: calc(0.75em + 1vmin);
 }
 
-main {
+main,
+.container {
   background-color: white;
-  grid-row-start: 2;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  grid-column-start: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -156,13 +160,16 @@ main {
   padding-top: 2rem;
   color: #f25430;
 }
-main div {
+main .container__fullname,
+.container .container__fullname {
+  margin-top: 85px;
   line-height: 1.2;
   font-family: "Blakely", sans-serif;
   color: #011140;
   font-size: 2rem;
 }
-main div ~ div {
+main .container__carousel-instructions,
+.container .container__carousel-instructions {
   width: 100%;
   height: 45%;
   display: flex;
@@ -171,7 +178,8 @@ main div ~ div {
   font-size: 1rem;
   padding-right: 9rem;
 }
-main a:hover {
+main a:hover,
+.container a:hover {
   cursor: pointer;
 }
 
@@ -187,7 +195,7 @@ section {
   justify-content: center;
 }
 
-h2 {
+.body-infos h2 {
   padding: 5%;
 }
 
@@ -287,98 +295,164 @@ h2 {
     grid-template-columns: 1fr 1fr;
   }
 }
-.main-biographien {
+.body-bios {
+  display: block;
+}
+
+.nav-bios-page {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+}
+@media (min-width: 500px) {
+  .nav-bios-page {
+    right: 1.9rem;
+  }
+}
+
+.header-bios {
+  background-color: white;
+  height: 100px;
+}
+
+.main__bios {
+  color: white;
   flex-direction: column;
-  font-size: 1rem;
+  grid-template-rows: min-content min-content;
   font-family: "Avenir Next LT Pro", sans-serif;
   padding-left: 0;
   padding-top: 0;
 }
-.main-biographien > section {
-  background-color: blueviolet;
-  padding: 4%;
-}
-.main-biographien > section:not(:nth-child(2)) {
+.main__bios > .main__bios__section {
+  background-color: #011140;
+  padding: 3rem 3rem 0rem 3rem;
   flex-direction: column;
-  background-color: rgb(16, 109, 109);
 }
-.main-biographien > .sectionB > div {
+.main__bios > .main__bios__section h2 {
+  padding: 0rem 3rem 0rem 3rem;
+}
+.main__bios > .main__bios__section > div > p {
+  line-height: 1.5;
+  font-family: "Avenir Next LT Pro", sans-serif;
+  margin: 1rem;
+  text-align: justify;
+}
+@media (min-width: 500px) {
+  .main__bios > .main__bios__section > div > p {
+    margin: 1rem 3rem;
+  }
+}
+.main__bios > .main__bios__section.main__bios--founder > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__bios > .main__bios__section .main__bios-founder--title {
+  padding-top: 1rem;
+}
+.main__bios > .main__bios__section .main__bios-founder--name {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+}
+.main__bios > .main__bios__section .main__bios--Virginia-Kahlo {
+  height: 12rem;
+  margin: 1rem;
+}
+.main__bios > .main__bios--teachers {
+  padding: 2rem 3rem 3rem 3rem;
+}
+.main__bios > .main__bios--teachers img {
+  width: 11rem;
+}
+@media (min-width: 600px) {
+  .main__bios > .main__bios--teachers {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.main__bios > .main__bios--teachers .main__bios--painters,
+.main__bios > .main__bios--teachers .main__bios--photographers {
+  margin-top: 2rem;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px 140px auto;
+  grid-template-rows: 3.5rem 11rem auto;
 }
-.main-biographien:first-child {
-  background-color: lightcoral;
+@media (min-width: 600px) {
+  .main__bios > .main__bios--teachers .main__bios--painters,
+  .main__bios > .main__bios--teachers .main__bios--photographers {
+    flex: 50%;
+  }
 }
-
-.sectionA > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (min-width: 992px) {
+  .main__bios > .main__bios--teachers .main__bios--painters,
+  .main__bios > .main__bios--teachers .main__bios--photographers {
+    flex: 25%;
+  }
 }
-
-.main-biographien > section > div > p {
-  margin: 2em;
-  margin-bottom: 3em;
-  text-align: justify;
+.main__bios > .main__bios--teachers .main__bios--photographers.main__bios--Paquito-Loco {
+  visibility: hidden;
 }
-.main-biographien > h1 {
-  font-size: 1.5rem;
-  font-family: "Avenir Next LT Pro", sans-serif;
-  display: flex;
-  justify-content: center;
-  /* font-stretch: extra-expanded; WARUM GREIT NICHT?*/
-  padding: 2em;
+.main__bios > .main__bios--main-art {
+  min-width: 100vw;
+  max-height: 45rem;
+  padding: 2rem 0;
+  padding-bottom: 0;
+  overflow: hidden;
 }
-.main-biographien > section > div > p {
-  line-height: 1.5;
-  font-family: "Avenir Next LT Pro", sans-serif;
-  font-size: 1rem;
-}
-
-.sectionA > div > h2 {
-  padding-top: 1%;
-  font-size: large;
+.main__bios > .main__bios--main-art .main__bios--main-art-2 {
+  transform: scaleX(-1);
 }
 
 header {
-  background-color: white;
   display: grid;
-  align-items: center;
-  padding-top: 1.4rem;
-  grid-template-columns: 5fr 2fr 3fr;
+  padding-top: 37px;
+  grid-template-columns: 5fr 3fr 4fr 3fr 3fr;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  z-index: 10;
 }
 header #logo {
+  margin-top: -3px;
   margin-left: 2.5rem;
 }
 header #logo img {
   height: auto;
   width: 7rem;
 }
-header button {
-  grid-column-start: 2;
+header .btn,
+header .header__btn {
+  grid-column-start: 3;
   background-color: white;
   border: 3px solid #011140;
   border-radius: 5px;
   width: fit-content;
-  padding: 0.3rem 0.6rem 0.1rem 0.6rem;
+  height: 34px;
+  padding: 0.2rem 0.6rem 0rem;
   color: #011140;
   font-family: "Avenir Next LT Pro", sans-serif;
   font-size: 0.85rem;
 }
-@media (min-width: 650px) {
-  header button {
-    grid-column-start: 3;
+@media (min-width: 600px) {
+  header .btn,
+  header .header__btn {
+    grid-column-start: 4;
+  }
+}
+@media (min-width: 1100px) {
+  header .btn,
+  header .header__btn {
+    grid-column-start: 5;
   }
 }
 
 nav {
   position: fixed;
-  top: 2.1rem;
+  top: 2rem;
   right: 2.1rem;
+  z-index: 9;
 }
-nav .toggler {
+nav .nav__input {
   position: absolute;
   top: 0;
   right: 0;
@@ -388,25 +462,25 @@ nav .toggler {
   height: 40px;
   opacity: 0;
 }
-nav .toggler:checked + .hamburger > div {
+nav .nav__input:checked + .nav__hamburger > div {
   transform: rotate(135deg);
 }
-nav .toggler:checked + .hamburger > div:before, nav .toggler:checked + .hamburger > div:after {
+nav .nav__input:checked + .nav__hamburger > div:before, nav .nav__input:checked + .nav__hamburger > div:after {
   top: 0;
   transform: rotate(90deg);
 }
-nav .toggler:checked ~ .menu {
+nav .nav__input:checked ~ .menu {
   visibility: visible;
 }
-nav .toggler:checked ~ .menu > div {
+nav .nav__input:checked ~ .menu > div {
   transform: scale(1);
   transition-duration: 0.4s ease;
 }
-nav .toggler:checked ~ .menu > div > div {
+nav .nav__input:checked ~ .menu > div > div {
   opacity: 1;
   transition: opacity 0.4s ease;
 }
-nav .hamburger {
+nav .nav__hamburger {
   position: absolute;
   top: 0;
   right: 0;
@@ -420,7 +494,7 @@ nav .hamburger {
   justify-content: center;
   transition: all 0.9s ease;
 }
-nav .hamburger > div {
+nav .nav__hamburger > div {
   position: relative;
   width: 100%;
   height: 2px;
@@ -429,7 +503,7 @@ nav .hamburger > div {
   align-items: center;
   justify-content: center;
 }
-nav .hamburger > div:before, nav .hamburger > div:after {
+nav .nav__hamburger > div:before, nav .nav__hamburger > div:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -438,7 +512,7 @@ nav .hamburger > div:before, nav .hamburger > div:after {
   height: 2px;
   background: inherit;
 }
-nav .hamburger > div:after {
+nav .nav__hamburger > div:after {
   top: 10px;
 }
 nav .menu {
@@ -453,7 +527,7 @@ nav .menu {
   align-items: center;
   justify-content: center;
 }
-nav .menu > div {
+nav .menu > .menu__wrap {
   background: white;
   width: 300vw;
   height: 300vw;
@@ -464,7 +538,7 @@ nav .menu > div {
   transform: scale(1);
   transition: all 0.5s ease;
 }
-nav .menu > div > div > ul > li {
+nav .menu > .menu__wrap > ul > li {
   border: #011140 solid 3px;
   height: 7rem;
   width: 2rem;
@@ -473,21 +547,23 @@ nav .menu > div > div > ul > li {
   padding: 0.5rem;
 }
 @media (min-width: 650px) {
-  nav .menu > div > div > ul > li {
+  nav .menu > .menu__wrap > ul > li {
     transform: translate(-13rem, -1rem) rotate(405deg);
     height: 8rem;
     width: 2.5rem;
   }
 }
-nav .menu > div > div > ul > li ~ li {
+nav .menu > .menu__wrap > ul > li ~ li {
   transform: translate(3rem, 3rem) rotate(-45deg);
 }
 @media (min-width: 650px) {
-  nav .menu > div > div > ul > li ~ li {
+  nav .menu > .menu__wrap > ul > li ~ li {
     transform: translate(13rem, -9rem) rotate(-45deg);
   }
 }
-nav .menu > div > div > ul > li > a {
+nav .menu .menu__team,
+nav .menu .menu__team--link,
+nav .menu .menu__infos--link {
   color: #f25430;
   text-decoration: none;
   font-family: "Avenir Next LT Pro", sans-serif;
@@ -495,81 +571,127 @@ nav .menu > div > div > ul > li > a {
   transition: color 0.04s ease;
 }
 @media (min-width: 650px) {
-  nav .menu > div > div > ul > li > a {
+  nav .menu .menu__team,
+  nav .menu .menu__team--link,
+  nav .menu .menu__infos--link {
     font-size: 1.2rem;
   }
 }
-nav .menu > div > div > ul > li > a > .team {
+nav .menu .menu__team .menu__team-letters,
+nav .menu .menu__team--link .menu__team-letters,
+nav .menu .menu__infos--link .menu__team-letters {
   transform: translate(3rem, 3rem) rotate(-45deg);
   display: flex;
   flex-direction: column;
   line-height: 20px;
 }
-nav .menu > div > div > ul > li > a > .team .t {
+nav .menu .menu__team .menu__team-letters .t,
+nav .menu .menu__team--link .menu__team-letters .t,
+nav .menu .menu__infos--link .menu__team-letters .t {
   transform: translate(2rem);
 }
-nav .menu > div > div > ul > li > a > .team .e {
+nav .menu .menu__team .menu__team-letters .e,
+nav .menu .menu__team--link .menu__team-letters .e,
+nav .menu .menu__infos--link .menu__team-letters .e {
   transform: translate(3rem);
 }
-nav .menu > div > div > ul > li > a > .team .a {
+nav .menu .menu__team .menu__team-letters .a,
+nav .menu .menu__team--link .menu__team-letters .a,
+nav .menu .menu__infos--link .menu__team-letters .a {
   transform: translate(4rem);
 }
-nav .menu > div > div > ul > li > a > .team .m {
+nav .menu .menu__team .menu__team-letters .m,
+nav .menu .menu__team--link .menu__team-letters .m,
+nav .menu .menu__infos--link .menu__team-letters .m {
   transform: translate(5rem);
 }
 @media (min-width: 650px) {
-  nav .menu > div > div > ul > li > a {
+  nav .menu .menu__team,
+  nav .menu .menu__team--link,
+  nav .menu .menu__infos--link {
     transform: translate(1rem, 0.5rem) rotate(-45deg);
   }
-  nav .menu > div > div > ul > li > a .t {
+  nav .menu .menu__team .t,
+  nav .menu .menu__team--link .t,
+  nav .menu .menu__infos--link .t {
     transform: translate(2rem);
   }
-  nav .menu > div > div > ul > li > a .e {
+  nav .menu .menu__team .e,
+  nav .menu .menu__team--link .e,
+  nav .menu .menu__infos--link .e {
     transform: translate(3rem);
   }
-  nav .menu > div > div > ul > li > a .a {
+  nav .menu .menu__team .a,
+  nav .menu .menu__team--link .a,
+  nav .menu .menu__infos--link .a {
     transform: translate(4rem);
   }
-  nav .menu > div > div > ul > li > a .m {
+  nav .menu .menu__team .m,
+  nav .menu .menu__team--link .m,
+  nav .menu .menu__infos--link .m {
     transform: translate(5rem);
   }
 }
-nav .menu > div > div > ul > li > a > .infos {
+nav .menu .menu__team .menu__infos-letters,
+nav .menu .menu__team--link .menu__infos-letters,
+nav .menu .menu__infos--link .menu__infos-letters {
   transform: translate(-4rem, 1.6rem) rotate(45deg);
   line-height: 20px;
 }
-nav .menu > div > div > ul > li > a > .infos .i {
+nav .menu .menu__team .menu__infos-letters .i,
+nav .menu .menu__team--link .menu__infos-letters .i,
+nav .menu .menu__infos--link .menu__infos-letters .i {
   transform: translate(0rem);
 }
-nav .menu > div > div > ul > li > a > .infos .n {
+nav .menu .menu__team .menu__infos-letters .n,
+nav .menu .menu__team--link .menu__infos-letters .n,
+nav .menu .menu__infos--link .menu__infos-letters .n {
   transform: translate(-1rem);
 }
-nav .menu > div > div > ul > li > a > .infos .f {
+nav .menu .menu__team .menu__infos-letters .f,
+nav .menu .menu__team--link .menu__infos-letters .f,
+nav .menu .menu__infos--link .menu__infos-letters .f {
   transform: translate(-2rem);
 }
-nav .menu > div > div > ul > li > a > .infos .o {
+nav .menu .menu__team .menu__infos-letters .o,
+nav .menu .menu__team--link .menu__infos-letters .o,
+nav .menu .menu__infos--link .menu__infos-letters .o {
   transform: translate(-3rem);
 }
-nav .menu > div > div > ul > li > a > .infos .s {
+nav .menu .menu__team .menu__infos-letters .s,
+nav .menu .menu__team--link .menu__infos-letters .s,
+nav .menu .menu__infos--link .menu__infos-letters .s {
   transform: translate(-4rem);
 }
 @media (min-width: 650px) {
-  nav .menu > div > div > ul > li > a > .infos {
+  nav .menu .menu__team .menu__infos-letters,
+  nav .menu .menu__team--link .menu__infos-letters,
+  nav .menu .menu__infos--link .menu__infos-letters {
     transform: translate(-4rem, 2rem) rotate(45deg);
   }
-  nav .menu > div > div > ul > li > a > .infos .i {
+  nav .menu .menu__team .menu__infos-letters .i,
+  nav .menu .menu__team--link .menu__infos-letters .i,
+  nav .menu .menu__infos--link .menu__infos-letters .i {
     transform: translate(0rem);
   }
-  nav .menu > div > div > ul > li > a > .infos .n {
+  nav .menu .menu__team .menu__infos-letters .n,
+  nav .menu .menu__team--link .menu__infos-letters .n,
+  nav .menu .menu__infos--link .menu__infos-letters .n {
     transform: translate(-1.5rem);
   }
-  nav .menu > div > div > ul > li > a > .infos .f {
+  nav .menu .menu__team .menu__infos-letters .f,
+  nav .menu .menu__team--link .menu__infos-letters .f,
+  nav .menu .menu__infos--link .menu__infos-letters .f {
     transform: translate(-3rem);
   }
-  nav .menu > div > div > ul > li > a > .infos .o {
+  nav .menu .menu__team .menu__infos-letters .o,
+  nav .menu .menu__team--link .menu__infos-letters .o,
+  nav .menu .menu__infos--link .menu__infos-letters .o {
     transform: translate(-4.5rem);
   }
-  nav .menu > div > div > ul > li > a > .infos .s {
+  nav .menu .menu__team .menu__infos-letters .s,
+  nav .menu .menu__team--link .menu__infos-letters .s,
+  nav .menu .menu__infos--link .menu__infos-letters .s {
     transform: translate(-6rem);
   }
 }
@@ -581,17 +703,17 @@ footer {
   align-items: center;
   margin-bottom: 0;
 }
-footer .icons {
+footer .footer__icons {
   width: fit-content;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
 }
-footer .icons img {
+footer .footer__icons img {
   width: 2.3rem;
   height: 1.3rem;
 }
-footer .impressum {
+footer .footer__impressum {
   display: flex;
   justify-content: center;
   background-color: white;
@@ -605,11 +727,15 @@ footer a:hover {
   cursor: pointer;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 50px) {
   .carousel {
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    flex-direction: column;
   }
   .slides {
     width: 100%;
@@ -623,12 +749,10 @@ footer a:hover {
     display: none;
   }
   .slides-item {
-    align-items: center;
-    border-radius: 10px;
-    display: flex;
+    display: grid;
     flex-shrink: 0;
     font-size: 100px;
-    height: 100vh;
+    height: 85vh;
     justify-content: center;
     margin: 0 1rem;
     position: relative;
@@ -639,22 +763,11 @@ footer a:hover {
     width: 100vw;
     background-size: cover;
     background-position: center center;
+    grid-row-start: 1;
+    grid-row-end: -1;
   }
   .carousel__nav {
     padding: 1.25rem 0.5rem;
-  }
-  .slider-nav {
-    align-items: center;
-    background-color: #011140;
-    border-radius: 30%;
-    color: white;
-    display: inline-flex;
-    height: 1.5rem;
-    justify-content: center;
-    padding: 0.5rem;
-    position: relative;
-    text-decoration: none;
-    width: 1.5rem;
   }
   .slider-nav:hover,
   .slider-nav:active {
@@ -662,17 +775,40 @@ footer a:hover {
     color: white;
   }
   .slide-2 {
-    background-image: url(/resources/img/blue_stairs_bg.svg);
+    background-image: url(/resources/img/blue_mobile2.svg);
   }
+}
+@media (min-width: 50px) and (min-width: 500px) {
+  .slide-2 {
+    background-image: url(/resources/img/blue_bg2.svg);
+  }
+}
+@media (min-width: 50px) {
   .slide-3 {
     background-image: url(/resources/img/white_bg.svg);
   }
+}
+@media (min-width: 50px) {
   .slide-4 {
-    background-image: url(/resources/img/maushaus_bg.svg);
+    background-image: url(/resources/img/elfhouse_mobile.svg);
   }
+}
+@media (min-width: 50px) and (min-width: 500px) {
+  .slide-4 {
+    background-image: url(/resources/img/elfhouse_bg.svg);
+  }
+}
+@media (min-width: 50px) {
+  .slide-5 {
+    background-image: url(/resources/img/Superart_mobile2.svg), url(/resources/img/Superart_mobile2.svg);
+  }
+}
+@media (min-width: 50px) and (min-width: 700px) {
   .slide-5 {
     background-image: url(/resources/img/superkunst_bg.svg);
   }
+}
+@media (min-width: 50px) {
   .carousel__skip-link {
     height: 1px;
     overflow: hidden;
@@ -680,6 +816,8 @@ footer a:hover {
     top: auto;
     width: 1px;
   }
+}
+@media (min-width: 50px) {
   .carousel__skip-link:focus {
     align-items: center;
     background-color: #000;

@@ -1,64 +1,138 @@
-.main-biographien {
+// Add the last section
+// Fix last set of teachers to avoid hiding the last child (try this method: https://codepen.io/heydon/pen/ebQyYV?editors=1100)
+// Better the alt descriptions to convey a feeling
+
+.body-bios {
+  display: block;
+}
+
+.nav-bios-page {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+
+  @media (min-width:500px) {
+    right: 1.9rem;
+  }
+}
+
+.header-bios {
+  background-color: white;
+  height: 100px;
+}
+
+.main__bios {
+  color: white;
   flex-direction: column;
-  font-size: 1rem;
+  grid-template-rows: min-content min-content;
   font-family: $font-default;
   padding-left: 0;
   padding-top: 0;
 
   > {
-    section {
-      &:not(:nth-child(2)) {
-        flex-direction: column;
-        background-color: rgb(16, 109, 109);
+    .main__bios__section {
+      background-color: $secondary-color;
+      padding: 3rem 3rem 0rem 3rem;
+      flex-direction: column;
+
+      h2 {
+        padding: 0rem 3rem 0rem 3rem;
       }
 
-      background-color: blueviolet;
-      padding: 4%;
+      &>div>p {
+        line-height: 1.5;
+        font-family: $font-default;
+        margin: 1rem;
+        text-align: justify;
+
+        @media (min-width:500px) {
+          margin: 1rem 3rem;
+        }
+      }
+
+      &.main__bios--founder>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main__bios-founder--title {
+        padding-top: 1rem;
+      }
+
+      .main__bios-founder--name {
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+      }
+
+      .main__bios--Virginia-Kahlo {
+        height: 12rem;
+        margin: 1rem;
+      }
     }
 
-    .sectionB>div {
-      display: grid;
-      justify-items: center;
-      grid-template-columns: 1fr;
-      grid-template-rows: 60px 140px auto;
+    .main__bios--teachers {
+      padding: 2rem 3rem 3rem 3rem;
+      // .main__bios--painters:not(:nth-child(1)),
+      // .main__bios--photographers:not(:nth-child(1)) {
+      //   margin-top: 2rem;
+      // }
+
+      img {
+        width: 11rem;
+      }
+
+      @media (min-width:600px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .main__bios--painters,
+      .main__bios--photographers {
+        margin-top: 2rem;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3.5rem 11rem auto;
+
+        @media (min-width:600px) {
+          flex: 50%;
+        }
+
+        @media (min-width:992px) {
+          flex: 25%;
+        }
+      }
+
+      .main__bios--photographers {
+        &.main__bios--Paquito-Loco {
+          visibility: hidden;
+        }
+      }
+    }
+
+    // Wie kann ich das img so ansprechen, dass es kein overflow vertically hat, aber die ganze horizontally Fläche behält  
+    .main__bios--main-art {
+      min-width: 100vw;
+      max-height: 45rem;
+      padding: 2rem 0;
+      padding-bottom: 0;
+      overflow: hidden;
+
+      img {
+
+        @media (min-width:600px) {
+          // object-fit: cover;
+          // background-size: 100% 40rem;
+          // object-fit: scale-down;
+        }
+      }
+
+      // overflow: hidden;
+      // object-fit: scale-down;
+
+      .main__bios--main-art-2 {
+        transform: scaleX(-1);
+      }
     }
   }
-
-  &:first-child {
-    background-color: lightcoral;
-  }
-}
-
-.sectionA>div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.main-biographien> {
-  section>div>p {
-    margin: 2em;
-    margin-bottom: 3em;
-    text-align: justify;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    font-family: $font-default;
-    display: flex;
-    justify-content: center;
-    /* font-stretch: extra-expanded; WARUM GREIT NICHT?*/
-    padding: 2em;
-  }
-
-  section>div>p {
-    line-height: 1.5;
-    font-family: $font-default;
-    font-size: 1rem;
-  }
-}
-
-.sectionA>div>h2 {
-  padding-top: 1%;
-  font-size: large;
 }

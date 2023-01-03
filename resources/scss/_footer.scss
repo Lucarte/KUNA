@@ -6,7 +6,7 @@ footer {
   align-items: center;
   margin-bottom: 0;
 
-  .icons {
+  .footer__icons {
     width: fit-content;
     padding: .5rem;
     display: flex;
@@ -19,7 +19,7 @@ footer {
   }
 
   // warum kann ich dieses Element nicht einfach mit dem Footer Angaben zentrieren?
-  .impressum {
+  .footer__impressum {
     display: flex;
     justify-content: center;
     background-color: white;

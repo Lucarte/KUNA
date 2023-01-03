@@ -1,14 +1,17 @@
 header {
-  // position: fixed;
-  // z-index: 2;
-  background-color: white;
+  // background-color: white;
   display: grid;
-  align-items: center;
-  padding-top: 1.4rem;
-  grid-template-columns: 5fr 2fr 3fr;
+  // align-items: center;
+  padding-top: 37px;
+  grid-template-columns: 5fr 3fr 4fr 3fr 3fr;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  z-index: 10;
 
-  // Hacerlo responsive, de pronto mas grande segun la pantalla
+  // Hacerlo responsive, de pronto mas grande segun la pantalla o ponerle un filtro tambien para que se ponga de otro color
   #logo {
+    margin-top: -3px;
     margin-left: 2.5rem;
 
     img {
@@ -17,20 +20,26 @@ header {
     }
   }
 
-  button {
-    grid-column-start: 2;
+  .btn,
+  .header__btn {
+    grid-column-start: 3;
     background-color: white;
     border: 3px solid $secondary-color;
     border-radius: 5px;
     width: fit-content;
-    padding: .3rem .6rem .1rem .6rem;
+    height: 34px;
+    padding: 0.2rem 0.6rem 0rem;
     color: $secondary-color;
     font-family: $font-default;
     font-size: .85rem;
     // font-stretch: ultra-expanded; does not work!
 
-    @media (min-width: 650px) {
-      grid-column-start: 3;
+    @media (min-width: 600px) {
+      grid-column-start: 4;
+    }
+
+    @media (min-width: 1100px) {
+      grid-column-start: 5;
     }
   }
 }

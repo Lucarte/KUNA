@@ -5,52 +5,50 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KUNA</title>
+  <title>INFOS</title>
   <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 
-<body>
+<body class="body-infos">
   <header>
     <a href="index.html" role="menuitem" id="logo">
-      <img src="/resources/img/logo_orange.svg"
+      <img src="./resources/img/logo_orange.svg"
         alt="three triangle silouhetten without bottom line over each other with the text KUNA to the left of it - all in orange">
     </a>
-    <button class="btn">
+    <button class=" btn, header__btn">
       ANMELDEN
     </button>
-    <nav tabindex="0" class="menu-wrap">
-      <input type="checkbox" class="toggler" />
-      <div class="hamburger">
+    <nav tabindex="0">
+      <input type="checkbox" class="nav__input" />
+      <div class="nav__hamburger">
         <div></div>
       </div>
       <div class="menu">
-        <div>
-          <div>
-            <ul>
-              <li class="2nd-page">
-                <a href="biographien.html" role="menuitem">
-                  <div class="team">
-                    <p class="t">T</p>
-                    <p class="e">E</p>
-                    <p class="a">A</p>
-                    <p class="m">M</p>
-                  </div>
-                </a>
-              </li>
-              <li class="3rd-page">
-                <a href="infos.html" role="menuitem">
-                  <div class="infos">
-                    <p class="i">S</p>
-                    <p class="n">O</p>
-                    <p class="f">F</p>
-                    <p class="o">N</p>
-                    <p class="s">I</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="menu__wrap">
+          <ul>
+            <li class="menu__team">
+              <a class="menu__team--link" href="biographien.html" role="menuitem">
+                <div class="menu__team-letters">
+                  <p class="t">T</p>
+                  <p class="e">E</p>
+                  <p class="a">A</p>
+                  <p class="m">M</p>
+                </div>
+              </a>
+            </li>
+            <li class="menu__infos">
+              <a class="menu__infos--link" href="infos.html" role="menuitem">
+                <div class="menu__infos-letters">
+                  <p class="i">S</p>
+                  <p class="n">O</p>
+                  <p class="f">F</p>
+                  <p class="o">N</p>
+                  <p class="s">I</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -165,12 +163,18 @@
   </main>
 
   <footer>
-    <div class="icons">Icons
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+    <div class="footer__icons">
+      <a class="footer__icons--link" href="https://instagram.com" target="_blank">
+        <img src="./resources/img/instagram_white.svg" alt="instagram-icon-silhouette-darkblue">
+      </a>
+      <a class="footer__icons--link" href="https://twitter.com" target="_blank">
+        <img src="./resources/img/twitter_white.svg" alt="twitter-icon-silhouette-darkblue">
+      </a>
+      <a class="footer__icons--link" href="https://facebook.com" target="_blank">
+        <img src="./resources/img/facebook_white.svg" alt="facebook-icon-silhouette-darkblue">
+      </a>
     </div>
-    <div class="impressum"><a>Impressum</a></div>
+    <div class="footer__impressum"><a>Impressum</a></div>
   </footer>
 
 

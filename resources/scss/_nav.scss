@@ -1,9 +1,10 @@
 nav {
   position: fixed;
-  top: 2.1rem;
+  top: 2rem;
   right: 2.1rem;
+  z-index: 9;
 
-  .toggler {
+  .nav__input {
     position: absolute;
     top: 0;
     right: 0;
@@ -14,7 +15,7 @@ nav {
     opacity: 0;
 
     // Toggler animation
-    &:checked+.hamburger>div {
+    &:checked+.nav__hamburger>div {
       transform: rotate(135deg);
 
       // Turns lines into X
@@ -41,7 +42,7 @@ nav {
     }
   }
 
-  .hamburger {
+  .nav__hamburger {
     position: absolute;
     top: 0;
     right: 0;
@@ -96,7 +97,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    &>div {
+    &>.menu__wrap {
       background: white;
       width: 300vw;
       height: 300vw;
@@ -107,189 +108,135 @@ nav {
       transform: scale(1);
       transition: all .5s ease;
 
-      &>div {
-        // text-align: center;
-        // max-width: 90vw;
-        // max-height: 100vh;
-        // opacity: 0;
-        // transition: opacity .4s ease;
+      &>ul>li {
+        border: $secondary-color solid 3px;
+        height: 7rem;
+        width: 2rem;
+        border-radius: 5px;
+        transform: translate(-3rem, -7rem) rotate(405deg);
+        padding: .5rem;
 
+        @media (min-width: 650px) {
+          transform: translate(-13rem, -1rem) rotate(405deg);
+          height: 8rem;
+          width: 2.5rem;
+        }
 
-
-        &>ul>li {
-          border: $secondary-color solid 3px;
-          height: 7rem;
-          width: 2rem;
-          border-radius: 5px;
-          transform: translate(-3rem, -7rem) rotate(405deg);
-          padding: .5rem;
+        &~li {
+          transform: translate(3rem, 3rem) rotate(-45deg);
 
           @media (min-width: 650px) {
-            transform: translate(-13rem, -1rem) rotate(405deg);
-            height: 8rem;
-            width: 2.5rem;
+            transform: translate(13rem, -9rem) rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    .menu__team,
+    .menu__team--link,
+    .menu__infos--link {
+      color: $primary-color;
+      text-decoration: none;
+      font-family: $font-default;
+      font-size: 1rem;
+      transition: color .04s ease;
+
+      @media (min-width: 650px) {
+        font-size: 1.2rem;
+      }
+
+      & .menu__team-letters {
+        transform: translate(3rem, 3rem) rotate(-45deg);
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
+
+        .t {
+          transform: translate(2rem)
+        }
+
+        .e {
+          transform: translate(3rem)
+        }
+
+        .a {
+          transform: translate(4rem)
+        }
+
+        .m {
+          transform: translate(5rem)
+        }
+      }
+
+      @media (min-width: 650px) {
+        transform: translate(1rem, .5rem) rotate(-45deg);
+
+
+        .t {
+          transform: translate(2rem)
+        }
+
+        .e {
+          transform: translate(3rem)
+        }
+
+        .a {
+          transform: translate(4rem)
+        }
+
+        .m {
+          transform: translate(5rem)
+        }
+      }
+
+      & .menu__infos-letters {
+        transform: translate(-4rem, 1.6rem) rotate(45deg);
+        line-height: 20px;
+
+        .i {
+          transform: translate(0rem)
+        }
+
+        .n {
+          transform: translate(-1rem)
+        }
+
+        .f {
+          transform: translate(-2rem)
+        }
+
+        .o {
+          transform: translate(-3rem)
+        }
+
+        .s {
+          transform: translate(-4rem)
+        }
+
+        @media (min-width: 650px) {
+          transform: translate(-4rem, 2rem) rotate(45deg);
+
+          .i {
+            transform: translate(0rem)
           }
 
-          &~li {
-            transform: translate(3rem, 3rem) rotate(-45deg);
-
-            @media (min-width: 650px) {
-              transform: translate(13rem, -9rem) rotate(-45deg);
-            }
+          .n {
+            transform: translate(-1.5rem)
           }
 
-          &>a {
-            color: $primary-color;
-            text-decoration: none;
-            font-family: $font-default;
-            font-size: 1rem;
-            transition: color .04s ease;
+          .f {
+            transform: translate(-3rem)
+          }
 
-            @media (min-width: 650px) {
-              font-size: 1.2rem;
-            }
+          .o {
+            transform: translate(-4.5rem)
+          }
 
-            &>.team {
-              transform: translate(3rem, 3rem) rotate(-45deg);
-              display: flex;
-              flex-direction: column;
-              line-height: 20px;
-
-              .t {
-                transform: translate(2rem)
-              }
-
-              .e {
-                transform: translate(3rem)
-              }
-
-              .a {
-                transform: translate(4rem)
-              }
-
-              .m {
-                transform: translate(5rem)
-              }
-            }
-
-            @media (min-width: 650px) {
-              transform: translate(1rem, .5rem) rotate(-45deg);
-
-
-              .t {
-                transform: translate(2rem)
-              }
-
-              .e {
-                transform: translate(3rem)
-              }
-
-              .a {
-                transform: translate(4rem)
-              }
-
-              .m {
-                transform: translate(5rem)
-              }
-            }
-
-            &>.infos {
-              transform: translate(-4rem, 1.6rem) rotate(45deg);
-              line-height: 20px;
-
-              .i {
-                transform: translate(0rem)
-              }
-
-              .n {
-                transform: translate(-1rem)
-              }
-
-              .f {
-                transform: translate(-2rem)
-              }
-
-              .o {
-                transform: translate(-3rem)
-              }
-
-              .s {
-                transform: translate(-4rem)
-              }
-
-              @media (min-width: 650px) {
-                transform: translate(-4rem, 2rem) rotate(45deg);
-
-                .i {
-                  transform: translate(0rem)
-                }
-
-                .n {
-                  transform: translate(-1.5rem)
-                }
-
-                .f {
-                  transform: translate(-3rem)
-                }
-
-                .o {
-                  transform: translate(-4.5rem)
-                }
-
-                .s {
-                  transform: translate(-6rem)
-                }
-              }
-            }
+          .s {
+            transform: translate(-6rem)
           }
         }
       }
     }
   }
 }
-
-
-
-
-
-
-// ul {
-//   display: none;
-// }
-
-// input {
-//   opacity: 1;
-//   z-index: 2;
-//   height: 3rem;
-//   width: 3rem;
-//   padding: .5rem;
-//   // display: none;
-//   top: 30px;
-//   right: 16px;
-// }
-
-// #hamburger-nav {
-//   z-index: 1;
-//   position: absolute;
-//   align-self: center;
-//   background-color: $primary-color;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   height: 2.75rem;
-//   width: 2.75rem;
-//   padding: .5rem;
-//   top: 30px;
-//   right: 20px;
-
-
-//   span {
-//     display: inline-block;
-//     width: 1.75rem;
-//     height: .33rem;
-//     border-radius: 2px;
-//     background-color: white;
-//   }
-
-//   @media (min-width: 768px) {}
-// }

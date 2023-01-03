@@ -5,64 +5,61 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kahlo</title>
+  <title>TEAM</title>
   <link rel="stylesheet" type="text/css" href="reset.css">
   <link rel="stylesheet" type="text/css" href="public/css/style.css">
 </head>
 
-<body>
-  <header>
+<body class="body-bios">
+  <header class="header-bios">
     <a href="index.html" role="menuitem" id="logo">
-      <img src="/resources/img/logo_orange.svg"
+      <img src="./resources/img/logo_orange.svg"
         alt="three triangle silouhetten without bottom line over each other with the text KUNA to the left of it - all in orange">
     </a>
-    <button class="btn">
+    <button class=" btn, header__btn">
       ANMELDEN
     </button>
-    <nav tabindex="0" class="menu-wrap">
-      <input type="checkbox" class="toggler" />
-      <div class="hamburger">
+    <nav class="nav-bios-page" tabindex="0">
+      <input type="checkbox" class="nav__input" />
+      <div class="nav__hamburger">
         <div></div>
       </div>
       <div class="menu">
-        <div>
-          <div>
-            <ul>
-              <li class="2nd-page">
-                <a href="biographien.html" role="menuitem">
-                  <div class="team">
-                    <p class="t">T</p>
-                    <p class="e">E</p>
-                    <p class="a">A</p>
-                    <p class="m">M</p>
-                  </div>
-                </a>
-              </li>
-              <li class="3rd-page">
-                <a href="infos.html" role="menuitem">
-                  <div class="infos">
-                    <p class="i">S</p>
-                    <p class="n">O</p>
-                    <p class="f">F</p>
-                    <p class="o">N</p>
-                    <p class="s">I</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="menu__wrap">
+          <ul>
+            <li class="menu__team">
+              <a class="menu__team--link" href="biographien.html" role="menuitem">
+                <div class="menu__team-letters">
+                  <p class="t">T</p>
+                  <p class="e">E</p>
+                  <p class="a">A</p>
+                  <p class="m">M</p>
+                </div>
+              </a>
+            </li>
+            <li class="menu__infos">
+              <a class="menu__infos--link" href="infos.html" role="menuitem">
+                <div class="menu__infos-letters">
+                  <p class="i">S</p>
+                  <p class="n">O</p>
+                  <p class="f">F</p>
+                  <p class="o">N</p>
+                  <p class="s">I</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="main-biographien">
-    <h1>BIOGRAPHIEN</h1>
-    <section class="sectionA">
+  <main class="main__bios">
+    <section class="main__bios__section main__bios--founder">
       <div>
-        <h2>Professor Virginia Kahlo</h2>
-        <a href="https://placeholder.com/"><img class="img1" src="https://via.placeholder.com/200"
-            alt="Kunst Beispiel 1"></a>
+        <h2 class="main__bios-founder--title">Founder of KUNA</h2>
+        <h2 class="main__bios-founder--name">Prof. Virginia Kahlo</h2>
+        <img class="main__bios--Virginia-Kahlo" src="/resources/img/Kahlo.svg" alt="Portrait of the woman Founder" />
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati minima vel, ab beatae explicabo
           consequatur
           deleniti totam temporibus autem laborum error quos saepe reiciendis hic voluptatibus. Explicabo perferendis
@@ -77,26 +74,84 @@
         </p>
       </div>
     </section>
-    <section class="sectionB">
-      <div class="divl lehrerin1">
+
+    <section class="main__bios__section main__bios--main-art">
+      <img class="main__bios--main-art-1" src="/resources/img/avocado.svg" alt="">
+    </section>
+
+    <section class="main__bios__section main__bios--teachers main__bios--teachers-paint">
+      <!-- Cambiar los nombres de los profes a zB main__bios--Pepita-Mendieta -->
+      <div class="main__bios--painters divl lehrerin1">
         <h2>Vorname Nachname</h2>
-        <a href="https://placeholder.com/"><img class="img1" src="https://via.placeholder.com/150"
-            alt="Kunst Beispiel 1"></a>
+        <img class="main__bios--Painter1" src="/resources/img/Painter1.svg" alt="Portrait of painter No.1" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, neque corrupti doloremque dolorum quae ipsa
           dolorem veritatis nostrum aspernatur voluptate recusandae explicabo maiores nihil tempore similique sed rerum
           quaerat animi placeat! Neque illum ullam quas unde corporis, sit saepe fugit expedita blanditiis laborum
           adipisci.</p>
       </div>
-      <div class="divl lehrerin2">
+      <div class="main__bios--painters main__bios--Paquita-Loca">
         <h2>Vorname Nachname</h2>
-        <a href="https://placeholder.com/"><img class="img1" src="https://via.placeholder.com/150"
-            alt="Kunst Beispiel 1"></a>
+        <img class="main__bios--Painter2" src="/resources/img/Painter2.svg" alt="Portrait of painter No.2" />
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo corporis quasi dolorum atque sed
           facilis iusto quidem dolores voluptate at expedita illum ratione magni corrupti officiis quisquam iure
           eligendi quos! Voluptatum pariatur voluptas dolore ex quas impedit numquam rem beatae illum
           sint suscipit, in animi placeat odio est repudiandae perferendis blanditiis consequatur quo!</p>
       </div>
-      <div class="divl lehrerin3">
+      <div class="main__bios--painters divl lehrerin3">
+        <h2>Vorname Nachname</h2>
+        <img class="main__bios--Painter3" src="/resources/img/Painter3.svg" alt="Portrait of painter No.3" />
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ea atque, culpa delectus facilis,
+          totam assumenda minus quis repellendus voluptas aspernatur itaque inventore exercitationem veniam sequi
+          voluptates
+          corrupti mollitia? Tempora porro consequuntur delectus facere illum culpa libero praesentium, veritatis
+          iure.</p>
+      </div>
+      <div class="main__bios--painters divl lehrerin4">
+        <h2>Vorname Nachname</h2>
+        <img class="main__bios--Painter4" src="/resources/img/Painter4.svg" alt="Portrait of painter No.4" />
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ea atque, culpa delectus facilis,
+          totam
+          assumenda minus quis repellendus voluptas aspernatur itaque inventore exercitationem veniam sequi voluptates
+          corrupti mollitia? Tempora porro consequuntur delectus facere illum culpa libero praesentium, veritatis
+          iure, sed nisi architecto. Molestias cum sit consequuntur voluptatem repudiandae rem.</p>
+      </div>
+    </section>
+
+    <section class="main__bios__section main__bios--main-art">
+      <img class="main__bios--main-art-2" src="/resources/img/avocado.svg" alt="">
+    </section>
+
+    <section class="main__bios__section main__bios--teachers main__bios--teachers-photography">
+      <!-- Cambiar los nombres de los profes a zB main__bios--Pepita-Mendieta -->
+      <div class="main__bios--photographers divl lehrerin1">
+        <h2>Vorname Nachname</h2>
+        <img class="main__bios--Photographer1" src="/resources/img/Photographer1.svg"
+          alt="Portrait of photographer No.1" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, neque corrupti doloremque dolorum quae ipsa
+          dolorem veritatis nostrum aspernatur voluptate recusandae explicabo maiores nihil tempore similique sed rerum
+          quaerat animi placeat! Neque illum ullam quas unde corporis, sit saepe fugit expedita blanditiis laborum
+          adipisci.</p>
+      </div>
+      <div class="main__bios--photographers divl lehrerin2">
+        <h2>Vorname Nachname</h2>
+        <img class="main__bios--Photographer2" src="/resources/img/Photographer2.svg"
+          alt="Portrait of photographer No.2" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus illo corporis quasi dolorum atque sed
+          facilis iusto quidem dolores voluptate at expedita illum ratione magni corrupti officiis quisquam iure
+          eligendi quos! Voluptatum pariatur voluptas dolore ex quas impedit numquam rem beatae illum
+          sint suscipit, in animi placeat odio est repudiandae perferendis blanditiis consequatur quo!</p>
+      </div>
+      <div class="main__bios--photographers divl lehrerin3">
+        <h2>Vorname Nachname</h2>
+        <img class="main__bios--Photographer3" src="/resources/img/Photographer3.svg"
+          alt="Portrait of photographer No.3" />
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ea atque, culpa delectus facilis,
+          totam assumenda minus quis repellendus voluptas aspernatur itaque inventore exercitationem veniam sequi
+          voluptates
+          corrupti mollitia? Tempora porro consequuntur delectus facere illum culpa libero praesentium, veritatis
+          iure.</p>
+      </div>
+      <div class="main__bios--photographers main__bios--Paquito-Loco">
         <h2>Vorname Nachname</h2>
         <a href="https://placeholder.com/"><img class="img1" src="https://via.placeholder.com/150"
             alt="Kunst Beispiel 1"></a>
@@ -106,26 +161,22 @@
           corrupti mollitia? Tempora porro consequuntur delectus facere illum culpa libero praesentium, veritatis
           iure.</p>
       </div>
-      <div class="divl lehrerin4">
-        <h2>Vorname Nachname</h2>
-        <a href="https://placeholder.com/"><img class="img1" src="https://via.placeholder.com/150"
-            alt="Kunst Beispiel 1"></a>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate ea atque, culpa delectus facilis,
-          totam
-          assumenda minus quis repellendus voluptas aspernatur itaque inventore exercitationem veniam sequi voluptates
-          corrupti mollitia? Tempora porro consequuntur delectus facere illum culpa libero praesentium, veritatis
-          iure, sed nisi architecto. Molestias cum sit consequuntur voluptatem repudiandae rem.</p>
-      </div>
     </section>
   </main>
 
   <footer>
-    <div class="icons">Icons
-      <img src="" alt="">
-      <img src="" alt="">
-      <img src="" alt="">
+    <div class="footer__icons">
+      <a class="footer__icons--link" href="https://instagram.com" target="_blank">
+        <img src="./resources/img/instagram_white.svg" alt="instagram-icon-silhouette-darkblue">
+      </a>
+      <a class="footer__icons--link" href="https://twitter.com" target="_blank">
+        <img src="./resources/img/twitter_white.svg" alt="twitter-icon-silhouette-darkblue">
+      </a>
+      <a class="footer__icons--link" href="https://facebook.com" target="_blank">
+        <img src="./resources/img/facebook_white.svg" alt="facebook-icon-silhouette-darkblue">
+      </a>
     </div>
-    <div class="impressum"><a>Impressum</a></div>
+    <div class="footer__impressum"><a>Impressum</a></div>
   </footer>
 
 </body>

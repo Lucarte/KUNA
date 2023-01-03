@@ -4,8 +4,8 @@
 
 body {
   display: grid;
-  grid-template-rows: 10vh 85vh;
+  grid-template-rows: 100px 85vh;
   background-color: $primary-color;
-  // position: relative;
   width: 100%;
+  font-size: calc(0.75em + 1vmin);
 }

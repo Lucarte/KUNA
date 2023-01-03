@@ -1,10 +1,12 @@
-@media (min-width: 650px) {
+@media (min-width: 50px) {
   .carousel {
-    // position: relative;
-    // z-index: 0;
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    flex-direction: column;
   }
 
   .slides {
@@ -21,12 +23,10 @@
   }
 
   .slides-item {
-    align-items: center;
-    border-radius: 10px;
-    display: flex;
+    display: grid;
     flex-shrink: 0;
     font-size: 100px;
-    height: 100vh;
+    height: 85vh;
     justify-content: center;
     margin: 0 1rem;
     position: relative;
@@ -37,25 +37,27 @@
     width: 100vw;
     background-size: cover;
     background-position: center center;
+    grid-row-start: 1;
+    grid-row-end: -1;
   }
 
   .carousel__nav {
     padding: 1.25rem .5rem;
   }
 
-  .slider-nav {
-    align-items: center;
-    background-color: $secondary-color;
-    border-radius: 30%;
-    color: white;
-    display: inline-flex;
-    height: 1.5rem;
-    justify-content: center;
-    padding: .5rem;
-    position: relative;
-    text-decoration: none;
-    width: 1.5rem;
-  }
+  // .slider-nav {
+  //   align-items: center;
+  //   background-color: $secondary-color;
+  //   border-radius: 30%;
+  //   color: white;
+  //   display: inline-flex;
+  //   height: 1.5rem;
+  //   justify-content: center;
+  //   padding: .5rem;
+  //   position: relative;
+  //   text-decoration: none;
+  //   width: 1.5rem;
+  // }
 
   .slider-nav:hover,
   .slider-nav:active {
@@ -65,7 +67,11 @@
 
 
   .slide-2 {
-    background-image: url(/resources/img/blue_stairs_bg.svg);
+    background-image: url(/resources/img/blue_mobile2.svg);
+
+    @media (min-width: 500px) {
+      background-image: url(/resources/img/blue_bg2.svg);
+    }
   }
 
   .slide-3 {
@@ -73,11 +79,19 @@
   }
 
   .slide-4 {
-    background-image: url(/resources/img/maushaus_bg.svg);
+    background-image: url(/resources/img/elfhouse_mobile.svg);
+
+    @media (min-width: 500px) {
+      background-image: url(/resources/img/elfhouse_bg.svg);
+    }
   }
 
   .slide-5 {
-    background-image: url(/resources/img/superkunst_bg.svg);
+    background-image: url(/resources/img/Superart_mobile2.svg), url(/resources/img/Superart_mobile2.svg);
+
+    @media (min-width: 700px) {
+      background-image: url(/resources/img/superkunst_bg.svg);
+    }
   }
 
 
