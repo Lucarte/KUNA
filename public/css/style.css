@@ -318,7 +318,7 @@ section {
 .main__bios {
   color: white;
   display: grid;
-  grid-template-rows: auto 20rem auto 20rem auto 49rem;
+  grid-template-rows: auto 20rem auto 20rem auto 50rem;
   font-family: "Avenir Next LT Pro", sans-serif;
   font-weight: 700;
   padding-left: 0;
@@ -422,16 +422,25 @@ section {
 .main__bios > .main__bios--main-art .main__bios--main-art-2 {
   transform: scaleX(-1);
 }
+.main__bios .main__bios--last-element-wrap {
+  background-color: white;
+  padding: 1rem 0rem 2rem 0rem;
+}
 .main__bios .main__bios--last-element {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.main__bios .main__bios--last-element h2 {
+  font-weight: 100;
+  color: #011140;
 }
 .main__bios .main__bios--last-element .main__bios__last-element--quote,
 .main__bios .main__bios--last-element .main__bios__last-element--quote-author,
 .main__bios .main__bios--last-element .main__bios__last-element--art-example,
 .main__bios .main__bios--last-element .main__bios__last-element--invitation {
   margin: 1rem;
+  color: #011140;
 }
 .main__bios .main__bios--last-element .main__bios__last-element--quote,
 .main__bios .main__bios--last-element .main__bios__last-element--quote-author {
@@ -444,11 +453,12 @@ section {
 }
 .main__bios .main__bios--last-element .main__bios__last-element--art-example {
   margin: 2rem;
-  filter: grayscale(1);
+  filter: brightness(1.1) contrast(0.89) hue-rotate(-86deg) saturate(1.65);
 }
 
 #last-element-btn {
-  grid-row-start: 1;
+  grid-row-start: 4;
+  position: absolute;
   background-color: white;
   border: 3px solid #011140;
   border-radius: 5px;
@@ -458,18 +468,9 @@ section {
   color: #011140;
   font-family: "Avenir Next LT Pro", sans-serif;
   font-size: 0.85rem;
+  z-index: 9;
+  transform: translate(-0.5rem, 29.7rem) rotate(33deg);
 }
-@media (min-width: 600px) {
-  #last-element-btn {
-    grid-column-start: 4;
-  }
-}
-@media (min-width: 1100px) {
-  #last-element-btn {
-    grid-column-start: 5;
-  }
-}
-
 header {
   display: grid;
   padding-top: 37px;
