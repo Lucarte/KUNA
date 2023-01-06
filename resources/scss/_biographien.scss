@@ -3,29 +3,31 @@
 // Better the alt descriptions to convey a feeling
 
 .body-bios {
-  display: block;
-}
-
-.nav-bios-page {
-  position: fixed;
-  top: 2rem;
-  right: 1rem;
-
-  @media (min-width:500px) {
-    right: 1.9rem;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .header-bios {
   background-color: white;
   height: 100px;
+
+  .nav-bios-page {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+
+    @media (min-width:500px) {
+      right: 1.9rem;
+    }
+  }
 }
 
 .main__bios {
   color: white;
-  flex-direction: column;
-  grid-template-rows: min-content min-content;
+  display: grid;
+  grid-template-rows: auto 20rem auto 20rem auto 49rem;
   font-family: $font-default;
+  font-weight: 700;
   padding-left: 0;
   padding-top: 0;
 
@@ -42,11 +44,13 @@
       &>div>p {
         line-height: 1.5;
         font-family: $font-default;
-        margin: 1rem;
+        font-weight: 400;
+        margin: 3rem 2rem;
+        // change justify
         text-align: justify;
 
         @media (min-width:500px) {
-          margin: 1rem 3rem;
+          margin: 3rem 2rem;
         }
       }
 
@@ -86,8 +90,23 @@
         flex-wrap: wrap;
       }
 
-      .main__bios--painters,
-      .main__bios--photographers {
+      &.main__bios--teachers-photography,
+      &.main__bios--teachers-paint {
+        padding: 0rem 1.5rem;
+
+        @media (min-width: 450px) {
+          padding: 0rem 3rem;
+        }
+      }
+
+      &.main__bios--teachers-photography {
+
+        @media (min-width: 650px) {
+          padding: 0rem 7rem;
+        }
+      }
+
+      .main__bios--painters {
         margin-top: 2rem;
         display: grid;
         justify-items: center;
@@ -104,8 +123,14 @@
       }
 
       .main__bios--photographers {
-        &.main__bios--Paquito-Loco {
-          visibility: hidden;
+        margin-top: 2rem;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3.5rem 11rem auto;
+
+        @media (min-width:800px) {
+          flex: 25%;
         }
       }
     }
@@ -114,8 +139,9 @@
     .main__bios--main-art {
       min-width: 100vw;
       max-height: 45rem;
-      padding: 2rem 0;
-      padding-bottom: 0;
+      padding: 0rem;
+      // padding: 2rem 0;
+      // padding-bottom: 0;
       overflow: hidden;
 
       img {
@@ -134,5 +160,66 @@
         transform: scaleX(-1);
       }
     }
+  }
+
+  .main__bios--last-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+    .main__bios__last-element--quote,
+    .main__bios__last-element--quote-author,
+    .main__bios__last-element--art-example,
+    .main__bios__last-element--invitation {
+      margin: 1rem;
+    }
+
+    .main__bios__last-element--quote,
+    .main__bios__last-element--quote-author {
+      font-family: $font-kunst;
+      font-size: x-large;
+    }
+
+    .main__bios__last-element--quote-author {
+      display: flex;
+      // change - flex-end only mobile size 
+      align-self: flex-end;
+    }
+
+    .main__bios__last-element--art-example {
+      margin: 2rem;
+      // orange version
+      // filter: brightness(1.1) contrast(0.89) hue-rotate(-86deg) saturate(1.65);
+      // sepia version
+      // filter: sepia(1);
+      filter: grayscale(1);
+    }
+
+
+  }
+}
+
+// cambiar flex por grid en el ultimo elemento para acomodar el boton?
+#last-element-btn {
+  grid-row-start: 1;
+  background-color: white;
+  border: 3px solid $secondary-color;
+  border-radius: 5px;
+  width: fit-content;
+  height: 34px;
+  padding: 0.2rem 0.6rem 0rem;
+  color: $secondary-color;
+  font-family: $font-default;
+  font-size: .85rem;
+  // font-stretch: ultra-expanded; does not work!
+
+  @media (min-width: 600px) {
+    grid-column-start: 4;
+  }
+
+  @media (min-width: 1100px) {
+    grid-column-start: 5;
   }
 }

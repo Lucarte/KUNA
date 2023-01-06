@@ -144,7 +144,7 @@ body {
   grid-template-rows: 100px 85vh;
   background-color: #f25430;
   width: 100%;
-  font-size: calc(0.75em + 1vmin);
+  font-size: calc(0.6rem + 1vmin);
 }
 
 main,
@@ -296,30 +296,31 @@ section {
   }
 }
 .body-bios {
-  display: block;
-}
-
-.nav-bios-page {
-  position: fixed;
-  top: 2rem;
-  right: 1rem;
-}
-@media (min-width: 500px) {
-  .nav-bios-page {
-    right: 1.9rem;
-  }
+  display: flex;
+  flex-direction: column;
 }
 
 .header-bios {
   background-color: white;
   height: 100px;
 }
+.header-bios .nav-bios-page {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+}
+@media (min-width: 500px) {
+  .header-bios .nav-bios-page {
+    right: 1.9rem;
+  }
+}
 
 .main__bios {
   color: white;
-  flex-direction: column;
-  grid-template-rows: min-content min-content;
+  display: grid;
+  grid-template-rows: auto 20rem auto 20rem auto 49rem;
   font-family: "Avenir Next LT Pro", sans-serif;
+  font-weight: 700;
   padding-left: 0;
   padding-top: 0;
 }
@@ -334,12 +335,13 @@ section {
 .main__bios > .main__bios__section > div > p {
   line-height: 1.5;
   font-family: "Avenir Next LT Pro", sans-serif;
-  margin: 1rem;
+  font-weight: 400;
+  margin: 3rem 2rem;
   text-align: justify;
 }
 @media (min-width: 500px) {
   .main__bios > .main__bios__section > div > p {
-    margin: 1rem 3rem;
+    margin: 3rem 2rem;
   }
 }
 .main__bios > .main__bios__section.main__bios--founder > div {
@@ -369,8 +371,20 @@ section {
     flex-wrap: wrap;
   }
 }
-.main__bios > .main__bios--teachers .main__bios--painters,
-.main__bios > .main__bios--teachers .main__bios--photographers {
+.main__bios > .main__bios--teachers.main__bios--teachers-photography, .main__bios > .main__bios--teachers.main__bios--teachers-paint {
+  padding: 0rem 1.5rem;
+}
+@media (min-width: 450px) {
+  .main__bios > .main__bios--teachers.main__bios--teachers-photography, .main__bios > .main__bios--teachers.main__bios--teachers-paint {
+    padding: 0rem 3rem;
+  }
+}
+@media (min-width: 650px) {
+  .main__bios > .main__bios--teachers.main__bios--teachers-photography {
+    padding: 0rem 7rem;
+  }
+}
+.main__bios > .main__bios--teachers .main__bios--painters {
   margin-top: 2rem;
   display: grid;
   justify-items: center;
@@ -378,29 +392,82 @@ section {
   grid-template-rows: 3.5rem 11rem auto;
 }
 @media (min-width: 600px) {
-  .main__bios > .main__bios--teachers .main__bios--painters,
-  .main__bios > .main__bios--teachers .main__bios--photographers {
+  .main__bios > .main__bios--teachers .main__bios--painters {
     flex: 50%;
   }
 }
 @media (min-width: 992px) {
-  .main__bios > .main__bios--teachers .main__bios--painters,
+  .main__bios > .main__bios--teachers .main__bios--painters {
+    flex: 25%;
+  }
+}
+.main__bios > .main__bios--teachers .main__bios--photographers {
+  margin-top: 2rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3.5rem 11rem auto;
+}
+@media (min-width: 800px) {
   .main__bios > .main__bios--teachers .main__bios--photographers {
     flex: 25%;
   }
 }
-.main__bios > .main__bios--teachers .main__bios--photographers.main__bios--Paquito-Loco {
-  visibility: hidden;
-}
 .main__bios > .main__bios--main-art {
   min-width: 100vw;
   max-height: 45rem;
-  padding: 2rem 0;
-  padding-bottom: 0;
+  padding: 0rem;
   overflow: hidden;
 }
 .main__bios > .main__bios--main-art .main__bios--main-art-2 {
   transform: scaleX(-1);
+}
+.main__bios .main__bios--last-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__bios .main__bios--last-element .main__bios__last-element--quote,
+.main__bios .main__bios--last-element .main__bios__last-element--quote-author,
+.main__bios .main__bios--last-element .main__bios__last-element--art-example,
+.main__bios .main__bios--last-element .main__bios__last-element--invitation {
+  margin: 1rem;
+}
+.main__bios .main__bios--last-element .main__bios__last-element--quote,
+.main__bios .main__bios--last-element .main__bios__last-element--quote-author {
+  font-family: "Blakely", sans-serif;
+  font-size: x-large;
+}
+.main__bios .main__bios--last-element .main__bios__last-element--quote-author {
+  display: flex;
+  align-self: flex-end;
+}
+.main__bios .main__bios--last-element .main__bios__last-element--art-example {
+  margin: 2rem;
+  filter: grayscale(1);
+}
+
+#last-element-btn {
+  grid-row-start: 1;
+  background-color: white;
+  border: 3px solid #011140;
+  border-radius: 5px;
+  width: fit-content;
+  height: 34px;
+  padding: 0.2rem 0.6rem 0rem;
+  color: #011140;
+  font-family: "Avenir Next LT Pro", sans-serif;
+  font-size: 0.85rem;
+}
+@media (min-width: 600px) {
+  #last-element-btn {
+    grid-column-start: 4;
+  }
+}
+@media (min-width: 1100px) {
+  #last-element-btn {
+    grid-column-start: 5;
+  }
 }
 
 header {
