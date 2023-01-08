@@ -144,7 +144,7 @@ body {
   grid-template-rows: 100px 85vh;
   background-color: #f25430;
   width: 100%;
-  font-size: calc(0.6rem + 1vmin);
+  font-size: calc(0.5rem + 1vmin);
 }
 
 main,
@@ -408,9 +408,9 @@ section {
   grid-template-columns: 1fr;
   grid-template-rows: 3.5rem 11rem auto;
 }
-@media (min-width: 800px) {
+@media (min-width: 900px) {
   .main__bios > .main__bios--teachers .main__bios--photographers {
-    flex: 25%;
+    flex: 33%;
   }
 }
 .main__bios > .main__bios--main-art {
@@ -423,41 +423,42 @@ section {
   transform: scaleX(-1);
 }
 .main__bios .main__bios--last-element-wrap {
-  background-color: white;
+  background-color: #f25430;
   padding: 1rem 0rem 2rem 0rem;
 }
-.main__bios .main__bios--last-element {
+.main__bios .main__bios--last-element-wrap .main__bios--last-element {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main__bios .main__bios--last-element h2 {
+.main__bios .main__bios--last-element-wrap .main__bios--last-element h2 {
   font-weight: 100;
-  color: #011140;
+  color: white;
 }
-.main__bios .main__bios--last-element .main__bios__last-element--quote,
-.main__bios .main__bios--last-element .main__bios__last-element--quote-author,
-.main__bios .main__bios--last-element .main__bios__last-element--art-example,
-.main__bios .main__bios--last-element .main__bios__last-element--invitation {
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--quote,
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--quote-author,
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--art-example,
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--invitation {
   margin: 1rem;
-  color: #011140;
+  color: white;
 }
-.main__bios .main__bios--last-element .main__bios__last-element--quote,
-.main__bios .main__bios--last-element .main__bios__last-element--quote-author {
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--quote,
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--quote-author {
   font-family: "Blakely", sans-serif;
-  font-size: x-large;
+  font-size: calc(1rem + 1vmin);
+  margin: 0.5rem;
 }
-.main__bios .main__bios--last-element .main__bios__last-element--quote-author {
-  display: flex;
-  align-self: flex-end;
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--quote {
+  padding: 0 5rem 0 0;
 }
-.main__bios .main__bios--last-element .main__bios__last-element--art-example {
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--quote-author {
+  padding: 0 0 0 16rem;
+}
+.main__bios .main__bios--last-element-wrap .main__bios--last-element .main__bios__last-element--art-example {
   margin: 2rem;
-  filter: brightness(1.1) contrast(0.89) hue-rotate(-86deg) saturate(1.65);
+  filter: brightness(1) contrast(0.89) hue-rotate(-93deg) saturate(1.65);
 }
-
-#last-element-btn {
-  grid-row-start: 4;
+.main__bios .main__bios--last-element-wrap #last-element-btn {
   position: absolute;
   background-color: white;
   border: 3px solid #011140;
@@ -469,8 +470,30 @@ section {
   font-family: "Avenir Next LT Pro", sans-serif;
   font-size: 0.85rem;
   z-index: 9;
-  transform: translate(-0.5rem, 29.7rem) rotate(33deg);
+  transform: translate(-0.5rem, 27.7rem) rotate(37.5deg);
 }
+@media (min-width: 1000px) {
+  .main__bios .main__bios--last-element-wrap #last-element-btn {
+    transform: translate(-0.5rem, 28rem) rotate(37.5deg);
+  }
+}
+@media (min-width: 1300px) {
+  .main__bios .main__bios--last-element-wrap #last-element-btn {
+    transform: translate(-0.5rem, 29rem) rotate(37.5deg);
+  }
+}
+
+.footer__bios {
+  background-color: white;
+}
+.footer__bios .footer__icons-bios {
+  padding-top: 0.7rem;
+}
+.footer__bios .footer__impressum-bios {
+  background-color: #011140;
+  color: white;
+}
+
 header {
   display: grid;
   padding-top: 37px;

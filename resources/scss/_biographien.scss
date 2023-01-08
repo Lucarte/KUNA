@@ -1,6 +1,4 @@
-// Add the last section
-// Fix last set of teachers to avoid hiding the last child (try this method: https://codepen.io/heydon/pen/ebQyYV?editors=1100)
-// Better the alt descriptions to convey a feeling
+// Better the alt descriptions to convey feelings
 
 .body-bios {
   display: flex;
@@ -129,8 +127,12 @@
         grid-template-columns: 1fr;
         grid-template-rows: 3.5rem 11rem auto;
 
-        @media (min-width:800px) {
-          flex: 25%;
+        // @media (min-width:768px) {
+        //   flex: 25%;
+        // }
+
+        @media (min-width:900px) {
+          flex: 33%;
         }
       }
     }
@@ -140,8 +142,6 @@
       min-width: 100vw;
       max-height: 45rem;
       padding: 0rem;
-      // padding: 2rem 0;
-      // padding-bottom: 0;
       overflow: hidden;
 
       img {
@@ -153,9 +153,6 @@
         }
       }
 
-      // overflow: hidden;
-      // object-fit: scale-down;
-
       .main__bios--main-art-2 {
         transform: scaleX(-1);
       }
@@ -163,70 +160,86 @@
   }
 
   .main__bios--last-element-wrap {
-    background-color: white;
+    background-color: $primary-color;
     padding: 1rem 0rem 2rem 0rem;
-  }
 
-  .main__bios--last-element {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-    h2 {
-      font-weight: 100;
-      color: $secondary-color;
-    }
-
-    .main__bios__last-element--quote,
-    .main__bios__last-element--quote-author,
-    .main__bios__last-element--art-example,
-    .main__bios__last-element--invitation {
-      margin: 1rem;
-      color: $secondary-color;
-    }
-
-    .main__bios__last-element--quote,
-    .main__bios__last-element--quote-author {
-      font-family: $font-kunst;
-      font-size: x-large;
-    }
-
-    .main__bios__last-element--quote-author {
+    .main__bios--last-element {
       display: flex;
-      // change - flex-end only mobile size 
-      align-self: flex-end;
+      flex-direction: column;
+      align-items: center;
+
+
+      h2 {
+        font-weight: 100;
+        // color: $secondary-color;
+        color: white;
+      }
+
+      .main__bios__last-element--quote,
+      .main__bios__last-element--quote-author,
+      .main__bios__last-element--art-example,
+      .main__bios__last-element--invitation {
+        margin: 1rem;
+        // color: $secondary-color;
+        color: white;
+      }
+
+      .main__bios__last-element--quote,
+      .main__bios__last-element--quote-author {
+        font-family: $font-kunst;
+        font-size: calc(1rem + 1vmin);
+        margin: .5rem;
+      }
+
+      .main__bios__last-element--quote {
+        padding: 0 5rem 0 0;
+      }
+
+      .main__bios__last-element--quote-author {
+        padding: 0 0 0 16rem;
+      }
+
+      .main__bios__last-element--art-example {
+        margin: 2rem;
+        filter: brightness(1) contrast(0.89) hue-rotate(-93deg) saturate(1.65) // sepia version
+      }
     }
 
-    .main__bios__last-element--art-example {
-      margin: 2rem;
-      // orange version
-      filter: brightness(1.1) contrast(0.89) hue-rotate(-86deg) saturate(1.65);
-      // sepia version
-      // filter: sepia(1);
-      // filter: grayscale(1);
+    #last-element-btn {
+      position: absolute;
+      background-color: white;
+      border: 3px solid $secondary-color;
+      border-radius: 5px;
+      width: fit-content;
+      height: 34px;
+      padding: 0.2rem 0.6rem 0rem;
+      color: $secondary-color;
+      font-family: $font-default;
+      font-size: .85rem;
+      z-index: 9;
+      transform: translate(-0.5rem, 27.7rem) rotate(37.5deg);
+
+      @media (min-width:1000px) {
+        transform: translate(-0.5rem, 28rem) rotate(37.5deg);
+      }
+
+      @media (min-width:1300px) {
+        transform: translate(-0.5rem, 29rem) rotate(37.5deg);
+      }
     }
   }
 }
 
-// cambiar flex por grid en el ultimo elemento para acomodar el boton?
-#last-element-btn {
-  grid-row-start: 4;
-  position: absolute;
+.footer__bios {
   background-color: white;
-  border: 3px solid $secondary-color;
-  border-radius: 5px;
-  width: fit-content;
-  height: 34px;
-  padding: 0.2rem 0.6rem 0rem;
-  color: $secondary-color;
-  font-family: $font-default;
-  font-size: .85rem;
-  z-index: 9;
-  transform: translate(-0.5rem, 29.7rem) rotate(33deg);
-  // font-stretch: ultra-expanded; does not work!
 
-  @media (min-width: 600px) {}
+  .footer__icons-bios {
+    // border-bottom: solid $primary-color;
+    padding-top: .7rem;
+  }
 
-  @media (min-width: 1100px) {}
+  .footer__impressum-bios {
+    background-color: $secondary-color;
+    color: white;
+  }
 }

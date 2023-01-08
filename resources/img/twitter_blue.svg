@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #011140;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #011140;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 47.45px;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g id="twitter_blue" data-name="twitter blue">
+      <rect class="cls-1" x="1" y="1" width="70" height="70" rx="12" ry="12"/>
+      <text class="cls-2" transform="translate(15.74 51.77) scale(2.58 1)"><tspan x="0" y="0">t</tspan></text>
+    </g>
+  </g>
+</svg>

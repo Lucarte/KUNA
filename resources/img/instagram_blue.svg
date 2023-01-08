@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #011140;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Icons">
+    <g id="Instagram_blue" data-name="Instagram blue">
+      <circle class="cls-1" cx="36.91" cy="36.02" r="11.97"/>
+      <circle class="cls-1" cx="54.42" cy="19.42" r="1.84"/>
+      <rect class="cls-1" x="1" y="1" width="70" height="70" rx="12" ry="12"/>
+    </g>
+  </g>
+</svg>
